@@ -1,0 +1,240 @@
+:root {
+    --color-primary: #2c3e50;
+    --color-secondary: #3498db;
+    --color-accent: #e74c3c;
+    --color-light: #ecf0f1;
+    --color-dark: #2c3e50;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-light);
+}
+
+.main-header {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.main-header h1 {
+    color: var(--color-primary);
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.nav-button i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+
+.nav-button span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    color: var(--color-secondary);
+}
+
+.nav-button:hover i {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 3rem;
+    }
+
+    .nav-button {
+        padding: 1.5rem;
+    }
+
+    .nav-button i {
+        font-size: 2rem;
+    }
+
+    .nav-button span {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para las tarjetas de paquetes */
+.package-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: visible;
+    position: relative;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.package-card .card-header {
+    border-bottom: none;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.package-card ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.package-card ul li:last-child {
+    border-bottom: none;
+}
+
+.package-card .bi {
+    margin-right: 0.5rem;
+}
+
+/* Ribbon para el paquete más popular */
+.ribbon {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    text-align: right;
+}
+
+.ribbon::before {
+    content: "Más Popular";
+    position: absolute;
+    top: 35px;
+    right: -25px;
+    transform: rotate(45deg);
+    width: 150px;
+    padding: 7px 0;
+    background-color: #ffc107;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos para la galería multimedia */
+.multimedia-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.multimedia-card:hover {
+    transform: translateY(-5px);
+}
+
+.country-title {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.video-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.audio-container {
+    background: var(--color-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.audio-container h4 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+audio {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--color-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .multimedia-card {
+        padding: 1rem;
+    }
+
+    .video-container iframe {
+        height: 300px;
+    }
+
+    .audio-container {
+        margin-top: 1rem;
+    }
+}
+
+/* Estilos para la tabla de destinos */
+.destination-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.table {
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0,123,255,0.05) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table-responsive {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
